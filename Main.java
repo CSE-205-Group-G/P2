@@ -80,7 +80,7 @@ public class Main {
      * Return studentList
      */
     private ArrayList<Student> readFile(String mInputFileStudent) throws FileNotFoundException {
-        ArrayList<Student> studentList = new ArrayList<Student>();
+        ArrayList<Student> studentList = new ArrayList();
         Scanner in = new Scanner(new File(mInputFileStudent));
         while (in.hasNext()) {
             String studentType = in.next();
@@ -184,12 +184,14 @@ public class Main {
      * Close the output file
      */
     private void writeFile(ArrayList<Student> pStudentList) throws FileNotFoundException {
-        PrintWriter out = new PrintWriter("p02-tuition.txt");
+        String outPutFile = "p02-tuition.txt";
+        PrintWriter out = new PrintWriter(outPutFile);
         for (Student student : pStudentList) {
-            out.printf(Student.getId() + " " + Student.getLastName() + " " + Student.getFirstName() + " " +
-                    Student.getTuition() + "\n");
+            out.printf(student.getId() + " " + student.getLastName() + " " + student.getFirstName() + " " +
+                    student.getTuition() + "\n");
         }
         out.close();
     }
+   
 
 }
