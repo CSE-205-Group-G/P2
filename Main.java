@@ -26,7 +26,7 @@ public class Main {
      * The method that drives the whole program and is called in main
      */
     private void run() {
-        ArrayList<Student> studentList = new ArrayList(null);
+        ArrayList<Student> studentList = new ArrayList();
 
         try {
             studentList = readFile();
@@ -113,7 +113,7 @@ public class Main {
         String fname = pIn.next();
         OnlineStudent student = new OnlineStudent(id, fname, lname);
         String fee = pIn.next();
-        int credits = pIn.nextInt(0);
+        int credits = pIn.nextInt();
         if (fee.equals("T")) {
             student.setTechFee(true);
         } else {
