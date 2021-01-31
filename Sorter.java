@@ -35,30 +35,6 @@ public class Sorter {
      * Returns true if we need to continue moving the element at pIndex until it reaches its
      * proper location.
      *
-     * This method uses the ternary operator ?: which has this syntax:
-     *
-     *     (conditional-expression) ? true-expression : false-expression
-     *
-     * The behavior is that the conditional-expression is evaluated and it will be either true or
-     * false. If the conditional-expression is true, then the expression (true-expression) following
-     * the ? symbol is evaluated. If the conditional expression is false, then the expression
-     * (false-expression) following the : symbol is evaluated. For example:
-     *
-     *     x = (a < b) ? 1 : 0;
-     *
-     * would compare a to see if it is less than b. If a < b is true, then 1 is assigned to x. If
-     * a < b is false, then 0 would be assigned to x. Note that the ternary operator is just a
-     * shorter way to write an if-else statement. The statement above could have been written as:
-     *
-     *     if (a < b) {
-     *         x = 1;
-     *     } else {
-     *         x = 0;
-     *     }
-     *
-     * Whether you prefer to write such code using an if-else statement or using the ternary
-     * operator is a personal choice, but you will see other programmers using the ternary operator
-     * so you should know how it works.
      */
     private static boolean keepMoving(ArrayList<Student> pList, int pIndex, int pOrder) {
         if (pIndex < 1) return false;
